@@ -12,5 +12,5 @@ rule SocGholish_JS_Inject
 		$s4 = "V2luZG93cw=="
 
 	condition:
-		all of them		
+		4 of them		
 }
