@@ -52,11 +52,11 @@ rule SocGholish_JS_Inject
 		date_created = "9/2/2021"
 
 	strings:
-		$s0 = "cmVmZXJyZXI=" fullword
-		$s1 = "Oi8vKFteL10rKS8=" fullword
-		$s2 = "dXNlckFnZW50" fullword
-		$s3 = "bG9jYWxTdG9yYWdl" fullword
-		$s4 = "V2luZG93cw==" fullword
+		$s0 = "cmVmZXJyZXI="
+		$s1 = "Oi8vKFteL10rKS8="
+		$s2 = "dXNlckFnZW50"
+		$s3 = "bG9jYWxTdG9yYWdl"
+		$s4 = "V2luZG93cw=="
 
 	condition:
 		all of them		
