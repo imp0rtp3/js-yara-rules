@@ -44,3 +44,20 @@ rule MAL_JS_SocGholish_Mar21_1 : js socgholish {
     condition:
         $try in (0 .. 10) and filesize > 3KB and filesize < 5KB and 8 of ($s*)
 }
+
+rule SocGholish_JS_Inject
+{
+	meta:
+		author = "Josh Trombley "
+		date_created = "9/2/2021"
+
+	strings:
+		$s0 = "cmVmZXJyZXI=" fullword
+		$s1 = "Oi8vKFteL10rKS8=" fullword
+		$s2 = "dXNlckFnZW50" fullword
+		$s3 = "bG9jYWxTdG9yYWdl" fullword
+		$s4 = "V2luZG93cw==" fullword
+
+	condition:
+		all of them		
+}
