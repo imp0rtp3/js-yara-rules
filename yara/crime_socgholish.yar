@@ -57,9 +57,11 @@ rule SocGholish_JS_Inject_1
 		$s2 = "dXNlckFnZW50"
 		$s3 = "bG9jYWxTdG9yYWdl"
 		$s4 = "V2luZG93cw=="
+		$s5 = "aHJlZg=="
+		$s6 = "QW5kcm9pZA=="
 
 	condition:
-		all of them		
+		4 of them		
 }
 
 rule SocGholish_JS_Inject_2
@@ -69,13 +71,14 @@ rule SocGholish_JS_Inject_2
 		date_created = "9/2/2021"
 
 	strings:
-		$s0 = "new RegExp"
+		$s0 = "new RegExp("
 		$s1 = "document.createElement('script')"
 		$s2 = "type = 'text/javascript'"
 		$s3 = "document.getElementsByTagName('script')"
-		$s4 = "parentNode.insertBefore"
-        	$s5 = "window.atob"
+		$s4 = ".parentNode.insertBefore("
+        	$s5 = "=window.atob("
+        	$s6 = ".async=trye;"
 
 	condition:
-		all of them		
+		5 of them		
 }
