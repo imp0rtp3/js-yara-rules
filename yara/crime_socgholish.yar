@@ -76,9 +76,9 @@ rule SocGholish_JS_Inject_2
 		$s2 = "type = 'text/javascript'"
 		$s3 = "document.getElementsByTagName('script')"
 		$s4 = ".parentNode.insertBefore("
-        	$s5 = "=window.atob("
-        	$s6 = ".async=trye;"
+    	$s5 = "=window.atob("
+    	$s6 = ".async=trye;"
 
 	condition:
-		5 of them		
+		all of them		
 }
